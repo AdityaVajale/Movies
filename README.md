@@ -1,3 +1,73 @@
+# Movie Picture Pipeline - Submission
+
+## GitHub Repository
+
+https://github.com/AdityaVajale/Movies
+
+## Deployed Application URLs
+
+### Frontend
+
+http://acb1a512296b3475db0e77151d54f7d4-2107044905.us-east-1.elb.amazonaws.com
+
+The Movie Picture frontend application is deployed to the Amazon EKS cluster and is accessible through the AWS LoadBalancer.
+
+### Backend
+
+http://afc523363cb9949089bdd4008905f78b-1043513470.us-east-1.elb.amazonaws.com
+
+### Backend Movies API
+
+http://afc523363cb9949089bdd4008905f78b-1043513470.us-east-1.elb.amazonaws.com/movies
+
+The backend `/movies` endpoint was successfully deployed and verified through the AWS LoadBalancer.
+
+## CI/CD Workflows
+
+The repository contains four GitHub Actions workflows:
+
+* Frontend CI
+* Frontend CD
+* Backend CI
+* Backend CD
+
+The workflows automate linting, testing, application builds, Docker image creation, Amazon ECR image publishing, and Kubernetes deployment to Amazon EKS.
+
+Docker images used for deployment are tagged with the Git commit SHA, and the Kubernetes deployment uses the corresponding SHA-tagged image.
+
+## CI/CD Verification
+
+All four workflows have been successfully executed:
+
+* Frontend CI — Successful
+* Frontend CD — Successful
+* Backend CI — Successful
+* Backend CD — Successful
+
+## Deployment Verification
+
+### Frontend
+
+The deployed frontend displays the Movie List application through the frontend AWS LoadBalancer.
+
+Add the screenshot showing the Movie List application with the frontend LoadBalancer URL visible in the browser address bar.
+
+### Backend
+
+The deployed backend `/movies` endpoint returns the movie data successfully through the backend AWS LoadBalancer.
+
+Add the screenshot showing the `/movies` response with the backend LoadBalancer URL visible.
+
+## GitHub Actions Evidence
+
+Add screenshots or links showing successful runs for:
+
+1. Frontend CI
+2. Frontend CD
+3. Backend CI
+4. Backend CD
+These add externally added into folder
+
 # Movie Picture Pipeline
 
 You've been brought on as the DevOps resource for a development team that manages a web application that is a catalog of Movie Picture movies. They're in dire need of automating their development workflows in hopes of accelerating their release cycle. They'd like to use Github Actions to automate testing, building and deploying their applications to an existing Kubernetes cluster.
